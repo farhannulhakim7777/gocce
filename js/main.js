@@ -159,7 +159,7 @@ reservationForm.addEventListener('submit', e => {
     `Thank you for choosing GOCCE Coffee! ☕✨`
 
   // WhatsApp number (nomor café GOCCE)
-  const waNumber = '6281211471947' // Format: 62 + nomor tanpa 0
+  const waNumber = '6281316046854' // Format: 62 + nomor tanpa 0
 
   // Open WhatsApp
   window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank')
