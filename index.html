@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GOCCE - Diskusi Rasa, Bertukar Cerita</title>
+    <title>GOCCE - Share Stories, Taste Conversations</title>
 
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="/logo/logoG.png">
@@ -15,11 +15,14 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 
 
 <body>
-    <!-- Navigation -->
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -41,40 +44,40 @@
         </div>
     </nav>
 
-   <!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="hero-content">
-        <div class="hero-subtitle">Premium Coffee Experience</div>
-        <h1 class="hero-title">GOCCE</h1>
-        <p class="hero-tagline">Diskusi Rasa, Bertukar Cerita</p>
-        <p class="hero-description">
-            Tempat di mana setiap cangkir kopi menjadi awal percakapan bermakna. Kami menghadirkan suasana hangat
-            dan premium untuk berbagi cerita, ide, dan kenikmatan rasa yang autentik.
-        </p>
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-value">4.7</div>
-                <div class="stat-label">Rating</div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-subtitle">Premium Coffee Experience</div>
+            <h1 class="hero-title">GOCCE</h1>
+            <p class="hero-tagline">
+                <span class="typing-text">Share Stories, Taste Conversations</span>
+                <span class="typing-cursor"></span>
+            </p>
+            <p class="hero-description">
+                Each cup of coffee here marks the beginning of meaningful conversations. We create a warm, elegant
+                atmosphere where stories unfold, ideas flourish, and genuine coffee craftsmanship comes alive.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">4.7</div>
+                    <div class="stat-label">Rating</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100+</div>
+                    <div class="stat-label">Reviews</div>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-value">100+</div>
-                <div class="stat-label">Reviews</div>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Reserve Now</a>
+                <a href="#menu" class="btn btn-secondary">View Menu</a>
             </div>
         </div>
-        <div class="cta-buttons">
-            <a href="#contact" class="btn btn-primary">Reservasi Sekarang</a>
-            <a href="#menu" class="btn btn-secondary">Lihat Menu</a>
+        <div class="hero-image">
+            <div class="hero-image-main">
+                <img src="/img/halamanutama.jpg" alt="Premium Café Experience" class="hero-photo-main">
+            </div>
         </div>
-    </div>
-    <div class="hero-image">
-        <div class="hero-image-main">
-            <img src="/img/halamanutama.jpg" alt="Premium Café Experience" class="hero-photo-main">
-        </div>
-        <div class="hero-image-accent">
-            <img src="/img/utama.jpg" alt="Cozy Atmosphere" class="hero-photo-accent">
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Menu Section -->
     <section class="menu-section" id="menu">
@@ -82,8 +85,8 @@
             <div class="section-subtitle">Our Signature</div>
             <h2 class="section-title">Menu Highlights</h2>
             <p class="section-description">
-                Setiap menu kami dibuat dengan penuh perhatian, menggunakan bahan berkualitas premium untuk menghadirkan
-                pengalaman rasa yang tak terlupakan.
+                Every dish on our menu is crafted with meticulous attention, using premium-quality ingredients to deliver
+                an unforgettable taste experience.
             </p>
         </div>
         <div class="menu-grid">
@@ -94,7 +97,7 @@
                     <img src="/img/carbonara.png" alt="Menu GOCCE" class="menu-photo">
                 </div>
                 <div class="menu-overlay">
-                    <h3 class="menu-name">Spaggheti Carbonara</h3>
+                    <h3 class="menu-name">Spaghetti Carbonara</h3>
                     <p class="menu-price"></p>
                 </div>
             </div>
@@ -106,7 +109,7 @@
                     <img src="/img/spicymie.png" alt="Menu GOCCE" class="menu-photo">
                 </div>
                 <div class="menu-overlay">
-                    <h3 class="menu-name">Spicy Mie</h3>
+                    <h3 class="menu-name">Spicy Noodles</h3>
                     <p class="menu-price"></p>
                 </div>
             </div>
@@ -118,32 +121,10 @@
                     <img src="/img/drink.jpg" alt="Menu GOCCE" class="menu-photo">
                 </div>
                 <div class="menu-overlay">
-                    <h3 class="menu-name"></h3>
+                    <h3 class="menu-name">Signature Beverage</h3>
                     <p class="menu-price"></p>
                 </div>
             </div>
-
-            <!-- Menu Card 4 -->
-            <!-- <div class="menu-card">
-                <div class="menu-card-image" style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.2), transparent), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 300&quot;><rect fill=&quot;%23A67B5B&quot; width=&quot;400&quot; height=&quot;300&quot;/></svg>'); background-size: cover;">
-                    <img src="images/menu-4.jpg" alt="Menu GOCCE" class="menu-photo">
-                </div>
-                <div class="menu-overlay">
-                    <h3 class="menu-name">Croissant Artisan</h3>
-                    <p class="menu-price"></p>
-                </div>
-            </div>
-
-          
-            <div class="menu-card">
-                <div class="menu-card-image" style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.2), transparent), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 300&quot;><rect fill=&quot;%23C44536&quot; width=&quot;400&quot; height=&quot;300&quot;/></svg>'); background-size: cover;">
-                    <img src="images/menu-5.jpg" alt="Menu GOCCE" class="menu-photo">
-                </div>
-                <div class="menu-overlay">
-                    <h3 class="menu-name">Matcha Latte</h3>
-                    <p class="menu-price"></p>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -153,29 +134,35 @@
             <div class="section-subtitle">Our Space</div>
             <h2 class="section-title">Atmosphere & Ambiance</h2>
             <p class="section-description">
-                Ruang yang dirancang untuk kenyamanan dan inspirasi. Setiap sudut café kami menceritakan kehangatan dan
-                perhatian pada detail.
+                A space designed for comfort and inspiration. Every corner of our café tells a story of warmth and
+                attention to detail.
             </p>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="/img/barista.jpg" alt="GOCCE Café Interior" class="gallery-photo">
+                <img src="/img/glr10.jpeg" alt="GOCCE Café Interior" class="gallery-photo">
             </div>
             <div class="gallery-item">
-                <img src="/img/galeri1.jpg" alt="GOCCE Coffee Details" class="gallery-photo">
+                <img src="/img/GLR001.jpeg" alt="GOCCE Coffee Details" class="gallery-photo">
             </div>
             <div class="gallery-item">
-                <img src="/img/galeri2.jpg" alt="GOCCE Pastries" class="gallery-photo">
+                <img src="/img/GLR002.jpeg" alt="GOCCE Pastries" class="gallery-photo">
             </div>
             <div class="gallery-item">
-                <img src="/img/galeri3.jpg" alt="GOCCE Outdoor Seating" class="gallery-photo">
+                <img src="/img/galeri2.jpg" alt="GOCCE Outdoor Seating" class="gallery-photo">
             </div>
-            <!-- <div class="gallery-item">
-            <img src="images/gallery-5.jpg" alt="GOCCE Latte Art" class="gallery-photo">
-        </div>
-        <div class="gallery-item">
-            <img src="images/gallery-6.jpg" alt="GOCCE Cozy Corner" class="gallery-photo">
-        </div> -->
+            <div class="gallery-item">
+                <img src="/img/GLR003.jpeg" alt="GOCCE Latte Art" class="gallery-photo">
+            </div>
+            <div class="gallery-item">
+                <img src="/img/galeri1.jpg" alt="GOCCE Cozy Corner" class="gallery-photo">
+            </div>
+            <div class="gallery-item">
+                <img src="/img/barista.jpg" alt="GOCCE Barista Craft" class="gallery-photo">
+            </div>
+            <div class="gallery-item">
+                <img src="/img/galeri3.jpg" alt="GOCCE Special Moments" class="gallery-photo">
+            </div>
         </div>
     </section>
 
@@ -184,9 +171,9 @@
         <div class="reviews-container">
             <div class="section-header">
                 <div class="section-subtitle">Our Happy Moments</div>
-                <h2 class="section-title">Our Customer</h2>
+                <h2 class="section-title">Our Customers</h2>
                 <p class="section-description">
-                    Setiap kunjungan menciptakan kenangan indah. Lihat momen-momen spesial pelanggan kami di GOCCE.
+                    Every visit creates beautiful memories. See the special moments of our customers at GOCCE.
                 </p>
             </div>
 
@@ -257,8 +244,7 @@
                         <div class="rating-count">Based on 100+ reviews</div>
                     </div>
                 </div>
-                <p class="rating-text">Terima kasih atas kepercayaan dan kunjungan Anda. Setiap senyum adalah
-                    kebahagiaan kami.</p>
+                <p class="rating-text">Thank you for your trust and visits. Every smile is our happiness.</p>
             </div>
         </div>
     </section>
@@ -269,30 +255,29 @@
             <div class="section-subtitle">How We Serve</div>
             <h2 class="section-title">Our Services</h2>
             <p class="section-description">
-                Kami menghadirkan berbagai layanan untuk memastikan kenyamanan Anda, baik di tempat maupun untuk
-                dinikmati di rumah.
+                We offer various services to ensure your comfort, whether you're here with us or enjoying at home.
             </p>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🪑</div>
                 <h3 class="service-title">Dine-in</h3>
-                <p class="service-description">Nikmati pengalaman café premium dengan suasana hangat dan nyaman</p>
+                <p class="service-description">Experience premium café dining with warm and comfortable atmosphere</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🚗</div>
                 <h3 class="service-title">Drive-through</h3>
-                <p class="service-description">Ambil pesanan favorit Anda tanpa perlu turun dari mobil</p>
+                <p class="service-description">Grab your favorite order without leaving your car</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">📦</div>
                 <h3 class="service-title">No-contact Delivery</h3>
-                <p class="service-description">Pesan online dan kami antar dengan protokol kesehatan terjaga</p>
+                <p class="service-description">Order online and we deliver with strict health protocols</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">👟</div>
                 <h3 class="service-title">Shoe Cleaning</h3>
-                <p class="service-description">Layanan cuci sepatu premium @gocce_cuci_sepatu</p>
+                <p class="service-description">Premium shoe cleaning service @gocce_cuci_sepatu</p>
             </div>
         </div>
     </section>
@@ -315,14 +300,15 @@
                     <div class="info-icon">📞</div>
                     <div class="info-content">
                         <h3>Phone</h3>
-                        <p><a href="tel:081211471947">0812-1147-1947</a></p>
+                        <p><a href="tel:081211471947">+62 812-1147-1947</a></p>
                     </div>
                 </div>
                 <div class="info-item">
-                    <div class="info-icon">📸</div>
+                    <div class="info-icon"><i class="fa-brands fa-instagram"></i></div>
                     <div class="info-content">
                         <h3>Instagram</h3>
                         <p><a href="https://instagram.com/gocce_cuci_sepatu" target="_blank">@gocce_cuci_sepatu</a></p>
+                        <p><a href="https://instagram.com/gocce_id" target="_blank">@gocce_id</a></p>
                     </div>
                 </div>
                 <div class="info-item">
@@ -332,11 +318,11 @@
                         <div class="hours-grid">
                             <div class="hours-item">
                                 <span>Monday - Friday</span>
-                                <span>09:00 - 23:00</span>
+                                <span>09:00 AM - 11:00 PM</span>
                             </div>
                             <div class="hours-item">
                                 <span>Saturday - Sunday</span>
-                                <span>09:00 - 00:00</span>
+                                <span>09:00 AM - Midnight</span>
                             </div>
                         </div>
                     </div>
@@ -345,8 +331,8 @@
             <div class="reservation-card">
                 <h3>Make a Reservation</h3>
                 <p>
-                    Pastikan tempat Anda! Hubungi kami untuk reservasi meja atau event khusus. Kami siap memberikan
-                    pengalaman terbaik untuk Anda.
+                    Secure your table now! Contact us for table reservations or special events. We're ready to provide
+                    the best experience for you.
                 </p>
                 <button class="btn-reservation" id="openReservationModal">
                     Reserve Your Table
@@ -363,74 +349,74 @@
             <div class="modal-header">
                 <div class="modal-icon">☕</div>
                 <h2 class="modal-title">Reserve Your Table</h2>
-                <p class="modal-subtitle">Nikmati pengalaman GOCCE yang tak terlupakan</p>
+                <p class="modal-subtitle">Experience an unforgettable moment at GOCCE</p>
             </div>
 
             <form class="reservation-form" id="reservationForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="fullName">Nama Lengkap</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama Anda" required>
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">No. Handphone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="08xx xxxx xxxx" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+62 8xx xxxx xxxx" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="date">Tanggal Reservasi</label>
+                        <label for="date">Reservation Date</label>
                         <input type="date" id="date" name="date" required>
                     </div>
                     <div class="form-group">
-                        <label for="time">Waktu</label>
+                        <label for="time">Time</label>
                         <select id="time" name="time" required>
-                            <option value="">Pilih Waktu</option>
-                            <option value="09:00">09:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="11:00">11:00</option>
-                            <option value="12:00">12:00</option>
-                            <option value="13:00">13:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="15:00">15:00</option>
-                            <option value="16:00">16:00</option>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                            <option value="19:00">19:00</option>
-                            <option value="20:00">20:00</option>
-                            <option value="21:00">21:00</option>
-                            <option value="22:00">22:00</option>
+                            <option value="">Select Time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                            <option value="18:00">06:00 PM</option>
+                            <option value="19:00">07:00 PM</option>
+                            <option value="20:00">08:00 PM</option>
+                            <option value="21:00">09:00 PM</option>
+                            <option value="22:00">10:00 PM</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="guests">Jumlah Tamu</label>
+                    <label for="guests">Number of Guests</label>
                     <select id="guests" name="guests" required>
-                        <option value="">Pilih Jumlah Tamu</option>
-                        <option value="1">1 Orang</option>
-                        <option value="2">2 Orang</option>
-                        <option value="3">3 Orang</option>
-                        <option value="4">4 Orang</option>
-                        <option value="5">5 Orang</option>
-                        <option value="6">6 Orang</option>
-                        <option value="7+">7+ Orang (Group)</option>
+                        <option value="">Select Number of Guests</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="7+">7+ People (Group)</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="notes">Catatan Khusus (Opsional)</label>
+                    <label for="notes">Special Notes (Optional)</label>
                     <textarea id="notes" name="notes" rows="3"
-                        placeholder="Contoh: Butuh highchair untuk anak, anniversary celebration, dll."></textarea>
+                        placeholder="Example: Need highchair for child, anniversary celebration, etc."></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit-reservation">
-                    <span class="btn-text">Konfirmasi Reservasi</span>
+                    <span class="btn-text">Confirm Reservation</span>
                     <span class="btn-icon">→</span>
                 </button>
 
-                <p class="form-note">*Kami akan menghubungi Anda melalui WhatsApp untuk konfirmasi reservasi</p>
+                <p class="form-note">*We will contact you via WhatsApp to confirm your reservation</p>
             </form>
         </div>
     </div>
@@ -440,10 +426,14 @@
         <div class="footer-container">
             <div class="footer-brand">
                 <h3>GOCCE</h3>
-                <p>Diskusi Rasa, Bertukar Cerita. Tempat di mana setiap cangkir kopi menjadi awal percakapan bermakna.
+                <p>Share Stories, Taste Conversations. A place where every cup of coffee is the beginning of a
+                    meaningful dialogue.
                 </p>
                 <div class="social-links">
-                    <a href="https://instagram.com/gocce_cuci_sepatu" target="_blank" class="social-link">📸</a>
+                    <a href="https://instagram.com/gocce_cuci_sepatu" target="_blank" class="social-link"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/gocce_id" target="_blank" class="social-link"><i
+                            class="fa-brands fa-instagram"></i></a>
                     <a href="tel:081211471947" class="social-link">📞</a>
                     <a href="#" class="social-link">✉️</a>
                 </div>
@@ -469,10 +459,10 @@
             <div class="footer-column">
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="tel:081211471947">0812-1147-1947</a></li>
+                    <li><a href="tel:081211471947">+62 812-1147-1947</a></li>
                     <li><a href="#">Tangerang, Banten</a></li>
-                    <li><a href="#">Mon-Fri: 09:00-23:00</a></li>
-                    <li><a href="#">Sat-Sun: 09:00-00:00</a></li>
+                    <li><a href="#">Mon-Fri: 09:00 AM - 11:00 PM</a></li>
+                    <li><a href="#">Sat-Sun: 09:00 AM - Midnight</a></li>
                 </ul>
             </div>
         </div>

@@ -175,3 +175,40 @@ reservationForm.addEventListener('submit', e => {
     )
   }, 300)
 })
+
+
+const textToType = 'Share Stories, Taste Conversations';
+const typingSpeed = 80;
+const deletingSpeed = 50;
+const pauseBetweenCycles = 2000;
+
+let currentIndex = 0;
+let isDeleting = false;
+
+const typingTextElement = document.querySelector('.typing-text');
+
+function typeAndDelete() {
+  if (!typingTextElement) return;
+
+  if (!isDeleting) {
+    if (currentIndex < textToType.length) {
+      typingTextElement.textContent = textToType.substring(0, currentIndex + 1);
+      currentIndex++;
+      setTimeout(typeAndDelete, typingSpeed);
+    } else {
+      isDeleting = true;
+      setTimeout(typeAndDelete, pauseBetweenCycles);
+    }
+  } else {
+    if (currentIndex > 0) {
+      typingTextElement.textContent = textToType.substring(0, currentIndex - 1);
+      currentIndex--;
+      setTimeout(typeAndDelete, deletingSpeed);
+    } else {
+      isDeleting = false;
+      setTimeout(typeAndDelete, 500);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', typeAndDelete);
