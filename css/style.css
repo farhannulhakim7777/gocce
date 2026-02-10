@@ -550,88 +550,450 @@ nav.scrolled .logo-img {
   margin: 0 auto;
 }
 
-/* .menu-card {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 8px 30px rgba(166, 123, 91, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  aspect-ratio: 4/3;
-} */
+/* ===================================================
+   MENU SECTION - POLAROID STYLE
+   =================================================== */
 
-.menu-card:hover {
-  transform: translateY(-8px);
-  /* box-shadow: 0 15px 45px rgba(166, 123, 91, 0.2); */
+.menu-section {
+  padding: 8rem 5%;
+  background: linear-gradient(
+    180deg,
+    var(--color-white) 0%,
+    var(--color-cream) 100%
+  );
+  position: relative;
+  overflow: hidden;
 }
 
-.menu-card-image {
-  width: 100%;
-  height: 100%;
+/* Decorative Background */
+.menu-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(166, 123, 91, 0.05),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section Header */
+.menu-section .section-header {
   position: relative;
-  background-size: cover;
-  background-position: center;
+  z-index: 1;
+}
+
+/* ===================================================
+   MENU GRID - POLAROID MASONRY
+   =================================================== */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 5rem auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================================
+   POLAROID MENU CARD
+   =================================================== */
+
+.menu-card {
+  position: relative;
+  background: white;
+  padding: 15px;
+  padding-bottom: 70px; /* Space untuk caption nama menu */
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 3px;
+  overflow: visible;
+}
+
+/* Random Rotation untuk Tiap Card */
+.menu-card:nth-child(1) {
+  transform: rotate(-3deg) translateY(10px);
+}
+
+.menu-card:nth-child(2) {
+  transform: rotate(4deg) translateY(-15px);
+}
+
+.menu-card:nth-child(3) {
+  transform: rotate(-2deg) translateY(5px);
+}
+
+.menu-card:nth-child(4) {
+  transform: rotate(3deg) translateY(-10px);
+}
+
+.menu-card:nth-child(5) {
+  transform: rotate(-4deg) translateY(15px);
+}
+
+.menu-card:nth-child(6) {
+  transform: rotate(2deg) translateY(-5px);
+}
+
+/* Hover Effect */
+.menu-card:hover {
+  transform: rotate(0deg) translateY(-20px) scale(1.05);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.2),
+    0 30px 70px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* ===================================================
+   MENU PHOTO (SQUARE RATIO)
+   =================================================== */
+
+.menu-card-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--color-cream);
 }
 
 .menu-photo {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1; /* Square untuk konsistensi */
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .menu-card:hover .menu-photo {
   transform: scale(1.08);
+  filter: brightness(1.05) contrast(1.05);
 }
 
-/* Menu Overlay */
+/* ===================================================
+   MENU OVERLAY (Caption di Bawah - Polaroid Style)
+   =================================================== */
+
 .menu-overlay {
   position: absolute;
-  inset: 0;
-  /* background: linear-gradient(
-    to top,
-    rgba(26, 26, 26, 0.85) 0%,
-    rgba(26, 26, 26, 0.5) 50%,
-    transparent 100%
-  ); */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.menu-card:hover .menu-overlay {
-  opacity: 1;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
 }
 
 .menu-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 0.5rem;
-  transform: translateY(20px);
-  transition: transform 0.4s ease;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-dark-brown);
+  margin: 0 0 0.25rem 0;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
 }
 
 .menu-card:hover .menu-name {
-  transform: translateY(0);
+  color: var(--color-red);
 }
 
 .menu-price {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-red);
-  transform: translateY(20px);
-  transition: transform 0.4s ease 0.1s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-brown);
+  margin: 0;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
 }
 
 .menu-card:hover .menu-price {
-  transform: translateY(0);
+  color: var(--color-red);
+}
+
+/* ===================================================
+   DECORATIVE TAPE EFFECT (Optional)
+   =================================================== */
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.menu-card:hover::before {
+  opacity: 1;
+}
+
+/* ===================================================
+   STAGGERED ANIMATION
+   =================================================== */
+
+.menu-card {
+  opacity: 0;
+  animation: fadeInPolaroid 0.6s ease forwards;
+}
+
+.menu-card:nth-child(1) { animation-delay: 0.1s; }
+.menu-card:nth-child(2) { animation-delay: 0.2s; }
+.menu-card:nth-child(3) { animation-delay: 0.3s; }
+.menu-card:nth-child(4) { animation-delay: 0.4s; }
+.menu-card:nth-child(5) { animation-delay: 0.5s; }
+.menu-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInPolaroid {
+  from {
+    opacity: 0;
+    transform: translateY(40px) rotate(0deg) scale(0.95);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - DESKTOP LARGE (1400px+)
+   =================================================== */
+
+@media (min-width: 1400px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - TABLET (1024px)
+   =================================================== */
+
+@media (max-width: 1024px) {
+  .menu-section {
+    padding: 6rem 5%;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+  }
+
+  .menu-card {
+    padding: 12px;
+    padding-bottom: 60px;
+  }
+
+  .menu-name {
+    font-size: 1.2rem;
+  }
+
+  .menu-price {
+    font-size: 1rem;
+  }
+
+  .menu-overlay {
+    bottom: 12px;
+    padding: 0 15px;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - MOBILE (768px)
+   =================================================== */
+
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 5rem 5%;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .menu-card {
+    padding: 10px;
+    padding-bottom: 55px;
+  }
+
+  /* Simplified rotation untuk mobile */
+  .menu-card:nth-child(odd) {
+    transform: rotate(-3deg);
+  }
+
+  .menu-card:nth-child(even) {
+    transform: rotate(3deg);
+  }
+
+  .menu-card:hover {
+    transform: rotate(0deg) translateY(-12px) scale(1.03);
+  }
+
+  .menu-name {
+    font-size: 1.1rem;
+  }
+
+  .menu-price {
+    font-size: 0.95rem;
+  }
+
+  .menu-overlay {
+    bottom: 10px;
+    padding: 0 12px;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE - SMALL MOBILE (480px)
+   =================================================== */
+
+@media (max-width: 480px) {
+  .menu-section {
+    padding: 4rem 4%;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .menu-card {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 12px;
+    padding-bottom: 60px;
+  }
+
+  /* Alternating rotation */
+  .menu-card:nth-child(1),
+  .menu-card:nth-child(3),
+  .menu-card:nth-child(5) {
+    transform: rotate(-4deg);
+  }
+
+  .menu-card:nth-child(2),
+  .menu-card:nth-child(4),
+  .menu-card:nth-child(6) {
+    transform: rotate(4deg);
+  }
+
+  .menu-card:hover {
+    transform: rotate(0deg) translateY(-10px) scale(1.02);
+  }
+
+  .menu-name {
+    font-size: 1.2rem;
+  }
+
+  .menu-price {
+    font-size: 1rem;
+  }
+
+  .menu-overlay {
+    bottom: 12px;
+  }
+}
+
+/* ===================================================
+   EXTRA SMALL DEVICES (360px)
+   =================================================== */
+
+@media (max-width: 360px) {
+  .menu-grid {
+    gap: 1.5rem;
+  }
+
+  .menu-card {
+    max-width: 300px;
+    padding: 10px;
+    padding-bottom: 55px;
+  }
+
+  .menu-name {
+    font-size: 1.1rem;
+  }
+
+  .menu-price {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===================================================
+   FIX UNTUK SAFARI & iOS
+   =================================================== */
+
+.menu-photo {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.menu-card {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* ===================================================
+   HOVER INTERACTION ENHANCEMENT
+   =================================================== */
+
+/* Subtle shine effect on hover */
+.menu-card::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 70px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.menu-card:hover::after {
+  opacity: 1;
+}
+
+/* ===================================================
+   ACCESSIBILITY - FOCUS STATES
+   =================================================== */
+
+.menu-card:focus {
+  outline: 3px solid var(--color-brown);
+  outline-offset: 5px;
+}
+
+.menu-card:focus-visible {
+  transform: rotate(0deg) translateY(-10px) scale(1.03);
 }
 
 /* Gallery Section */
