@@ -550,7 +550,7 @@ nav.scrolled .logo-img {
   margin: 0 auto;
 }
 
-.menu-card {
+/* .menu-card {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
@@ -558,11 +558,11 @@ nav.scrolled .logo-img {
   box-shadow: 0 8px 30px rgba(166, 123, 91, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   aspect-ratio: 4/3;
-}
+} */
 
 .menu-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 45px rgba(166, 123, 91, 0.2);
+  /* box-shadow: 0 15px 45px rgba(166, 123, 91, 0.2); */
 }
 
 .menu-card-image {
@@ -589,12 +589,12 @@ nav.scrolled .logo-img {
 .menu-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgba(26, 26, 26, 0.85) 0%,
     rgba(26, 26, 26, 0.5) 50%,
     transparent 100%
-  );
+  ); */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
