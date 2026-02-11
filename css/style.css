@@ -2899,21 +2899,41 @@ footer {
    TABLET (768px)
 ========================================== */
 @media (max-width: 768px) {
-  .event-carousel {
-    border-radius: 15px;
-  }
-
-  .event-img {
-    height: 380px;
-  }
-
-  .event-overlay {
-    padding: 1.8rem;
-  }
 
   .carousel-btn {
-    font-size: 1.6rem;
-    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+    padding: 0.5rem 0.9rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    width: 38px;
+    height: 38px;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .prev {
+    left: 8px;
+  }
+
+  .next {
+    right: 8px;
   }
 }
 
@@ -2950,26 +2970,41 @@ footer {
 /* =========================================
    EXTRA SMALL DEVICES (360px)
 ========================================== */
-@media (max-width: 360px) {
-  .event-img {
-    height: 260px;
-  }
-
-  .event-overlay h3 {
-    font-size: 1.1rem;
-  }
-
-  .event-overlay p {
-    font-size: 0.8rem;
-  }
+@media (max-width: 768px) {
 
   .carousel-btn {
-    display: none; /* di hp kecil lebih bagus pakai swipe */
+    font-size: 1.4rem;
+    padding: 0.5rem 0.9rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
   }
 }
-.event-track {
-  display: flex;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  touch-action: pan-y;
-}
 
+@media (max-width: 480px) {
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    width: 38px;
+    height: 38px;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .prev {
+    left: 8px;
+  }
+
+  .next {
+    right: 8px;
+  }
+}
