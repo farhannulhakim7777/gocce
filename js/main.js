@@ -212,3 +212,86 @@ function typeAndDelete() {
 }
 
 document.addEventListener('DOMContentLoaded', typeAndDelete);
+
+
+// event carousel
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector('.event-track');
+  const slides = document.querySelectorAll('.event-slide');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  const dotsContainer = document.querySelector('.carousel-dots');
+
+  if (!track || slides.length === 0) return;
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  let autoSlide;
+
+  /* ======================
+     CREATE DOTS
+  ====================== */
+  slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    if (index === 0) dot.classList.add('active');
+
+    dot.addEventListener('click', () => {
+      moveToSlide(index);
+      resetAutoSlide();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('span');
+
+  function updateDots() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[currentIndex]) {
+      dots[currentIndex].classList.add('active');
+    }
+  }
+
+  function moveToSlide(index) {
+    currentIndex = index;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateDots();
+  }
+
+  /* ======================
+     BUTTON NAVIGATION
+  ====================== */
+
+  nextBtn?.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    moveToSlide(currentIndex);
+    resetAutoSlide();
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    moveToSlide(currentIndex);
+    resetAutoSlide();
+  });
+
+  /* ======================
+     AUTO SLIDE
+  ====================== */
+
+  function startAutoSlide() {
+    autoSlide = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      moveToSlide(currentIndex);
+    }, 5000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+
+});
